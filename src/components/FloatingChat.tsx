@@ -1,21 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, X, Send, Phone } from "lucide-react";
+import { MessageCircle, X } from "lucide-react";
 
 export function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleTelegramClick = () => {
-    window.open("https://t.me/avtopul_saratov", "_blank");
-  };
-
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/78452000000", "_blank");
-  };
-
-  const handlePhoneClick = () => {
-    window.location.href = "tel:+78452000000";
   };
 
   return (
@@ -44,20 +36,7 @@ export function FloatingChat() {
               </div>
             </div>
 
-            <div className="p-4 space-y-3">
-              <button
-                onClick={handleTelegramClick}
-                className="w-full flex items-center gap-3 p-3 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 transition-all group"
-              >
-                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Send className="w-5 h-5 text-white" />
-                </div>
-                <div className="text-left flex-1">
-                  <div className="font-semibold text-white">Telegram</div>
-                  <div className="text-xs text-muted-foreground">Напишите нам в мессенджер</div>
-                </div>
-              </button>
-
+            <div className="p-4">
               <button
                 onClick={handleWhatsAppClick}
                 className="w-full flex items-center gap-3 p-3 rounded-xl bg-green-500/10 hover:bg-green-500/20 border border-green-500/30 transition-all group"
@@ -72,26 +51,6 @@ export function FloatingChat() {
                   <div className="text-xs text-muted-foreground">Чат в WhatsApp</div>
                 </div>
               </button>
-
-              <button
-                onClick={handlePhoneClick}
-                className="w-full flex items-center gap-3 p-3 rounded-xl bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 transition-all group"
-              >
-                <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Phone className="w-5 h-5 text-white" />
-                </div>
-                <div className="text-left flex-1">
-                  <div className="font-semibold text-white">Позвонить</div>
-                  <div className="text-xs text-muted-foreground">+7 (845) 200-00-00</div>
-                </div>
-              </button>
-
-              <div className="pt-2 border-t border-white/10">
-                <p className="text-xs text-muted-foreground text-center">
-                  Пн-Пт: 09:00 - 20:00 <br />
-                  Сб-Вс: 10:00 - 18:00
-                </p>
-              </div>
             </div>
           </div>
         )}
