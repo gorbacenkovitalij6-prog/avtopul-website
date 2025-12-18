@@ -32,21 +32,8 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="py-24 px-4 relative">
+    <section className="py-12 px-4 relative">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6">
-            <HelpCircle className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm text-emerald-400 font-medium">FAQ</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Частые <span className="gradient-text">вопросы</span>
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Ответы на популярные вопросы о пригоне автомобилей
-          </p>
-        </div>
-
         <div className="glass p-8 rounded-2xl border-white/20">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
